@@ -21,8 +21,8 @@ struct GuessTheFlagSwiftContentView: View {
             RadialGradient(stops: [.init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.3), Gradient.Stop(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3)],center: .top, startRadius: 200.0, endRadius: 700.0)
                 .ignoresSafeArea()
             
-//            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.pink]), startPoint: .topLeading, endPoint: .bottomTrailing)
-//                .ignoresSafeArea()
+            //            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.pink]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            //                .ignoresSafeArea()
             
             VStack {
                 Spacer()
@@ -74,7 +74,13 @@ struct GuessTheFlagSwiftContentView: View {
             if shouldResetGame == false {
                 Button("Continue", action: askQuestion)
             } else {
-                Button("Restart game", action: resetGame)
+                Button("Restart game") {
+                    currentCountOfQuestion = 1
+                    userScore = 0
+                    shouldResetGame = false
+                    countries.shuffle()
+                    print("LOGGING")
+                }
             }
         } message: {
             Text("Your score in \(userScore)")
@@ -82,9 +88,9 @@ struct GuessTheFlagSwiftContentView: View {
     }
     
     func flagTapped(_ number: Int) {
-        if currentCountOfQuestion < 3 {
-            currentCountOfQuestion += 1
-            
+        currentCountOfQuestion += 1
+        
+        if currentCountOfQuestion < 9 {
             if number == correctAnswer {
                 scoreTitle = "Correct"
                 userScore += 1
@@ -97,19 +103,27 @@ struct GuessTheFlagSwiftContentView: View {
                     userScore -= 1
                 }
             }
-            showScore = true
-        } else {
-            // Reset the game
-            resetGame()
+            
             showScore = true
         }
-    }
-    
-    func resetGame() {
-        userScore = 0
-        currentCountOfQuestion = 0
-        shouldResetGame = true
-        scoreTitle = "You have completed the game"
+        else {
+            if number == correctAnswer {
+                scoreTitle = "You have completed the game"
+
+                userScore += 1
+            } else {
+                scoreTitle = "Wrong! That’s the flag of \(countries[number])\n You have completed the game"
+
+                if userScore == 0 {
+                    userScore = 0
+                } else {
+                    userScore -= 1
+                }
+            }
+            
+            shouldResetGame = true
+            showScore = true
+        }
     }
     
     func askQuestion() {
