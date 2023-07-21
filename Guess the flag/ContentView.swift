@@ -16,7 +16,7 @@ struct ContentView: View {
         
         VStack {
             Button {
-                print("Button was tapped!")
+                print("Buttn was tapped!")
             } label: {
                 Label("Inbox", systemImage: "mail.fill")
                     .font(.system(size: 32.0))
