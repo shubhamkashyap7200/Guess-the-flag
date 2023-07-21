@@ -12,6 +12,7 @@
 		515D28B22A6A3E08002FEC53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515D28B12A6A3E08002FEC53 /* Assets.xcassets */; };
 		515D28B52A6A3E09002FEC53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515D28B42A6A3E09002FEC53 /* Preview Assets.xcassets */; };
 		515D28BC2A6A4DCB002FEC53 /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D28BB2A6A4DCB002FEC53 /* AlertSwiftUIView.swift */; };
+		515D28BE2A6A50F7002FEC53 /* GuessTheFlagSwiftContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D28BD2A6A50F7002FEC53 /* GuessTheFlagSwiftContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		515D28B12A6A3E08002FEC53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		515D28B42A6A3E09002FEC53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		515D28BB2A6A4DCB002FEC53 /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSwiftUIView.swift; sourceTree = "<group>"; };
+		515D28BD2A6A50F7002FEC53 /* GuessTheFlagSwiftContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagSwiftContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				515D28AD2A6A3E00002FEC53 /* Guess_the_flagApp.swift */,
 				515D28AF2A6A3E00002FEC53 /* ContentView.swift */,
 				515D28BB2A6A4DCB002FEC53 /* AlertSwiftUIView.swift */,
+				515D28BD2A6A50F7002FEC53 /* GuessTheFlagSwiftContentView.swift */,
 				515D28B12A6A3E08002FEC53 /* Assets.xcassets */,
 				515D28B32A6A3E09002FEC53 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				515D28BC2A6A4DCB002FEC53 /* AlertSwiftUIView.swift in Sources */,
 				515D28B02A6A3E00002FEC53 /* ContentView.swift in Sources */,
+				515D28BE2A6A50F7002FEC53 /* GuessTheFlagSwiftContentView.swift in Sources */,
 				515D28AE2A6A3E00002FEC53 /* Guess_the_flagApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
